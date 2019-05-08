@@ -53,9 +53,7 @@ func main() {
 		return
 	}
 	//!+main
-	out, _ := os.OpenFile("out.gif", os.O_WRONLY|os.O_CREATE, 0600)
-	defer out.Close()
-	lissajous(out)
+	lissajous(os.Stdout)
 }
 
 func lissajous(out io.Writer) {
